@@ -87,7 +87,7 @@ private:
         if (prefectures.empty()) {
             cout << "まだ日記はありません。" << endl;
         }
-        else {//イテレーター
+        else {
             sort(prefectures.begin(), prefectures.end());
             for (const auto& pref : prefectures) {
                 cout << pref << endl;
