@@ -10,21 +10,21 @@
 
 using namespace std;
 namespace fs = std::filesystem;
-//—·‚Ì–¼Œ¾
+//æ—…ã®åè¨€
 const vector<string> word = {
-    "wLife is an astounding journeyx",
-    "wl‚ª—·‚ğ‚·‚é‚Ì‚Í“’…‚·‚é‚½‚ß‚Å‚Í‚È‚­A—·‚ğ‚·‚é‚½‚ß‚Å‚ ‚éBx",
-    "w–¢’m‚Ì¢ŠE‚ğ’T‹‚·‚élX‚ÍA’n}‚ğ‚½‚È‚¢—·sÒ‚Å‚ ‚éBx",
-    "w—·‚ğ‚·‚é‚Æ‚¢‚¤‚±‚Æ‚Í¶‚«‚é‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚éDx",
-    "wl¶‚Í–`Œ¯‚âx",
-    "w^—‚Í‰ä‚ç‚ğŠJ•ú‚·‚éx"
+    "ã€Life is an astounding journeyã€",
+    "ã€äººãŒæ—…ã‚’ã™ã‚‹ã®ã¯åˆ°ç€ã™ã‚‹ãŸã‚ã§ã¯ãªãã€æ—…ã‚’ã™ã‚‹ãŸã‚ã§ã‚ã‚‹ã€‚ã€",
+    "ã€æœªçŸ¥ã®ä¸–ç•Œã‚’æ¢æ±‚ã™ã‚‹äººã€…ã¯ã€åœ°å›³ã‚’æŒãŸãªã„æ—…è¡Œè€…ã§ã‚ã‚‹ã€‚ã€",
+    "ã€æ—…ã‚’ã™ã‚‹ã¨ã„ã†ã“ã¨ã¯ç”Ÿãã‚‹ã¨ã„ã†ã“ã¨ã§ã‚ã‚‹ï¼ã€",
+    "ã€äººç”Ÿã¯å†’é™ºã‚„ã€",
+    "ã€çœŸç†ã¯æˆ‘ã‚‰ã‚’é–‹æ”¾ã™ã‚‹ã€"
 };
 
 struct DiaryEntry {
     string text;
     int score = 0;
 };
-//ƒNƒ‰ƒX
+//ã‚¯ãƒ©ã‚¹ï¼ï¼
 class DiaryManager {
 public:
 
@@ -35,12 +35,13 @@ public:
         }
     }
 
+    //ãƒ¡ãƒ‹ãƒ¥ãƒ¼è¨­å®š
     void run() {
         int choice;
         while (true) {
             displayMenu();
             if (!(cin >> choice)) {
-                cout << "”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B" << endl;
+                cout << "æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚" << endl;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 continue;
@@ -59,7 +60,7 @@ public:
                 return;
             }
             default:
-                cout << "–³Œø‚È‘I‘ğ‚Å‚·B‚à‚¤ˆê“x“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B" << endl;
+                cout << "ç„¡åŠ¹ãªé¸æŠã§ã™ã€‚ã‚‚ã†ä¸€åº¦å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚" << endl;
                 break;
             }
         }
@@ -70,23 +71,23 @@ private:
     mt19937 gen; 
 
     void displayMenu() const {
-        cout << "\n*E*E*E* “s“¹•{Œ§•Ê “ú‹L’  *E*E*E*" << endl;
-        cout << "1. “ú‹L‚ğ‚Â‚¯‚é" << endl;
-        cout << "2. “ú‹L‚ğŒ©‚é" << endl;
-        cout << "3. –K–âÏ‚İˆê——" << endl;
-        cout << "4. ŒoŒ§’l‚Ì•\¦" << endl;
-        cout << "5. I—¹" << endl;
-        cout << "*E*E*E*E*E*E*E*E*E*E*E*E*E*E*E*E*E*" << endl;
-        cout << "”Ô†‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ";
+        cout << "\n*ãƒ»*ãƒ»*ãƒ»* éƒ½é“åºœçœŒåˆ¥ æ—¥è¨˜å¸³ *ãƒ»*ãƒ»*ãƒ»*" << endl;
+        cout << "1. æ—¥è¨˜ã‚’ã¤ã‘ã‚‹" << endl;
+        cout << "2. æ—¥è¨˜ã‚’è¦‹ã‚‹" << endl;
+        cout << "3. è¨ªå•æ¸ˆã¿ä¸€è¦§" << endl;
+        cout << "4. çµŒçœŒå€¤ã®è¡¨ç¤º" << endl;
+        cout << "5. çµ‚äº†" << endl;
+        cout << "*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*ãƒ»*" << endl;
+        cout << "ç•ªå·ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ";
     }
 
     void listVisitedPrefectures() const {
-        cout << "\n--- –K–â‚µ‚½“s“¹•{Œ§ˆê—— ---" << endl;
+        cout << "\n--- è¨ªå•ã—ãŸéƒ½é“åºœçœŒä¸€è¦§ ---" << endl;
         vector<string> prefectures = getVisitedPrefectures();
         if (prefectures.empty()) {
-            cout << "‚Ü‚¾“ú‹L‚Í‚ ‚è‚Ü‚¹‚ñB" << endl;
+            cout << "ã¾ã æ—¥è¨˜ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚" << endl;
         }
-        else {
+        else {//ã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿ãƒ¼
             sort(prefectures.begin(), prefectures.end());
             for (const auto& pref : prefectures) {
                 cout << pref << endl;
@@ -96,12 +97,12 @@ private:
     }
 
     void addRecord() {
-        cout << "\n“s“¹•{Œ§–¼‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ";
+        cout << "\néƒ½é“åºœçœŒåã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ";
         string prefecture;
         getline(cin, prefecture);
         string filename = prefecture + ".txt";
 
-        cout << "–{•¶‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢iI—¹‚·‚é‚É‚ÍEnterƒL[‚ğ2‰ñ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢j:" << endl;
+        cout << "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ï¼ˆçµ‚äº†ã™ã‚‹ã«ã¯Enterã‚­ãƒ¼ã‚’2å›æŠ¼ã—ã¦ãã ã•ã„ï¼‰:" << endl;
         string line, content;
         while (getline(cin, line) && !line.empty()) {
             if (!content.empty()) content += "\n";
@@ -109,25 +110,25 @@ private:
         }
 
         if (content.empty()) {
-            cout << "\n–¢‹L“ü‚Ì‚½‚ß•Û‘¶‚µ‚Ü‚¹‚ñ‚Å‚µ‚½B" << endl;
+            cout << "\næœªè¨˜å…¥ã®ãŸã‚ä¿å­˜ã—ã¾ã›ã‚“ã§ã—ãŸã€‚" << endl;
             return;
         }
 
         int score = 0;
         while (true) {
-            cout << "ŒoŒ§’li1:’Ê‰ß, 2:~‚è—§‚Á‚½, 3:•à‚¢‚½, 4:–¼•¨‚ğH‚×‚½, 5:–é‚ğ–¾‚©‚µ‚½j‚ğ“ü—Í: ";
+            cout << "çµŒçœŒå€¤ï¼ˆ1:é€šé, 2:é™ã‚Šç«‹ã£ãŸ, 3:æ­©ã„ãŸ, 4:åç‰©ã‚’é£Ÿã¹ãŸ, 5:å¤œã‚’æ˜ã‹ã—ãŸï¼‰ã‚’å…¥åŠ›: ";
             if (cin >> score && score >= 1 && score <= 5) {
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
-            cout << "–³Œø‚È“ü—Í‚Å‚·B1‚©‚ç5‚Ì”¼Šp”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B" << endl;
+            cout << "ç„¡åŠ¹ãªå…¥åŠ›ã§ã™ã€‚1ã‹ã‚‰5ã®åŠè§’æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
         ofstream file_out(filename, ios::app);
         if (!file_out) {
-            cerr << "ƒGƒ‰[: ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚Ü‚¹‚ñ‚Å‚µ‚½B" << endl;
+            cerr << "ã‚¨ãƒ©ãƒ¼: ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ã¾ã›ã‚“ã§ã—ãŸã€‚" << endl;
             return;
         }
 
@@ -137,7 +138,7 @@ private:
 
         file_out << content << "\nSCORE::" << score;
         file_out.close();
-        cout << "\n•Û‘¶Š®—¹" << endl;
+        cout << "\nä¿å­˜å®Œäº†" << endl;
 
         checkJapanConquest();
     }
@@ -145,19 +146,19 @@ private:
     void viewRecord() {
         vector<string> prefectures = getVisitedPrefectures();
         if (prefectures.empty()) {
-            cout << "\n‚Ü‚¾“ú‹L‚Í‚ ‚è‚Ü‚¹‚ñB" << endl;
+            cout << "\nã¾ã æ—¥è¨˜ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚" << endl;
             return;
         }
-        cout << "\n‚Ç‚Ì“ú‹L‚ğŒ©‚Ü‚·‚©H" << endl;
+        cout << "\nã©ã®æ—¥è¨˜ã‚’è¦‹ã¾ã™ã‹ï¼Ÿ" << endl;
         sort(prefectures.begin(), prefectures.end());
         for (size_t i = 0; i < prefectures.size(); ++i) {
             cout << i + 1 << ". " << prefectures[i] << endl;
         }
 
-        cout << "\n”Ô†‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ";
+        cout << "\nç•ªå·ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ";
         int choice;
         if (!(cin >> choice) || choice < 1 || choice > prefectures.size()) {
-            cout << "–³Œø‚È”Ô†‚Å‚·B" << endl;
+            cout << "ç„¡åŠ¹ãªç•ªå·ã§ã™ã€‚" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return;
@@ -168,14 +169,14 @@ private:
         string filename = selected_prefecture + ".txt";
         ifstream file(filename);
 
-        cout << "\n¡ ¡ u" << selected_prefecture << "v‚Ì“ú‹L ¡ ¡" << endl;
+        cout << "\nâ– â–¡â–  ã€Œ" << selected_prefecture << "ã€ã®æ—¥è¨˜ â– â–¡â– " << endl;
         cout << file.rdbuf();
-        cout << "\n¡ ¡ ¡ ¡ ¡ ¡ ¡ ¡ ¡ ¡ ¡ ¡" << endl;
+        cout << "\nâ– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– â–¡â– " << endl;
         file.close();
     }
 
     void displayKeikenchi() const {
-        cout << "\n--- ‘S‘‚ÌŒoŒ§’l---" << endl;
+        cout << "\n--- å…¨å›½ã®çµŒçœŒå€¤---" << endl;
         long long T_total = 0;
         vector<string> prefectures = getVisitedPrefectures();
         sort(prefectures.begin(), prefectures.end());
@@ -188,15 +189,15 @@ private:
                         return a.score < b.score;
                     });
                 int max_score = max_it->score;
-                cout << prefecture_name << ": " << max_score << "“_" << endl;
+                cout << prefecture_name << ": " << max_score << "ç‚¹" << endl;
                 T_total += max_score;
             }
         }
         cout << endl;
-        cout << "y‘‡Œv: " << T_total << "“_z" << endl;
+        cout << "ã€ç·åˆè¨ˆ: " << T_total << "ç‚¹ã€‘" << endl;
     }
 
-    // šššu“ú–{§”evššš
+    // â˜…â˜…â˜…å®Ÿç¸¾è§£é™¤ã€Œæ—¥æœ¬ã‚’çŸ¥ã‚‹è€…ã€
     void checkJapanConquest() {
         if (japanConquestAchieved) {
             return;
@@ -205,8 +206,8 @@ private:
         
         if (getVisitedPrefectures().size() >= 47) {
             cout << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
-            cout << "!!!      šššy‘S‘§”ezššš      !!!" << endl;
-            cout << "!!! 47“s“¹•{Œ§‚·‚×‚Ä‚ğ–K‚ê‚Ü‚µ‚½ !!!" << endl;
+            cout << "!!!      â˜…â˜…â˜…ã€å…¨å›½åˆ¶è¦‡ã€‘â˜…â˜…â˜…      !!!" << endl;
+            cout << "!!!             ã€Œæ—¥æœ¬ã‚’çŸ¥ã‚‹è€…ã€        " << endl;
             cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
 
             japanConquestAchieved = true;
