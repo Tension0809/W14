@@ -74,8 +74,8 @@ private:
         cout << "\n*・*・*・* 都道府県別 日記帳 *・*・*・*" << endl;
         cout << "1. 日記をつける" << endl;
         cout << "2. 日記を見る" << endl;
-        cout << "3. 訪問済み一覧" << endl;
-        cout << "4. 経県値の表示" << endl;
+        cout << "3. 訪問済み" << endl;
+        cout << "4. 経県値" << endl;
         cout << "5. 終了" << endl;
         cout << "*・*・*・*・*・*・*・*・*・*・*・*・*・*・*・*・*・*" << endl;
         cout << "番号を入力してください: ";
@@ -87,7 +87,7 @@ private:
         if (prefectures.empty()) {
             cout << "まだ日記はありません。" << endl;
         }
-        else {
+        else {//イテレーター
             sort(prefectures.begin(), prefectures.end());
             for (const auto& pref : prefectures) {
                 cout << pref << endl;
